@@ -6,8 +6,8 @@ include "../Connection/ConnectionDB.php";
 if(isset($_POST["Register"])){
     
     $Username = trim($_POST["Username"]);
-    $Password = password_hash($_POST["Password"] , PASSWORD_DEFAULT); //? 60 karakterli bir hash üretmesini sağlar
-    $Email = FILTER_VAR($_POST["Email"] , FILTER_VALIDATE_EMAIL); //? metnin içince @ işareti var mı .com .edu.tr gibi uzantıyla bitiyor mu konrtol eder.
+    $Password = password_hash($_POST["Password"] , PASSWORD_DEFAULT); 
+    $Email = FILTER_VAR($_POST["Email"] , FILTER_VALIDATE_EMAIL); 
 
 
     if(empty($Username) || empty($Password) || empty($Email)){
