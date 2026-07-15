@@ -20,14 +20,14 @@ if(isset($_POST['forgotPass'])){
 
         $url = "http://localhost/PHP/Auth/ForgotPassword/ResetPass.php?token=$token";
 
-        $message = "Click the link below to reset your password:\n\n" . $url;
+        $message = "Şifrenizi yenilemek için tıklayın:\n\n" . $url;
 
         mail($email, 'Password Reset', $message);
 
-        echo "An email has been sent to $email with instructions on how to reset your password.";
+        echo "mail gönderildi";
     } else 
     {
-        echo "No user found with email $email.";
+        echo "kullanıcı bulunamadı $email.";
         }
 
 
