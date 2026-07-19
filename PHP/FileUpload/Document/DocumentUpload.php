@@ -17,7 +17,7 @@ if(isset($_POST['file_upload'])){
         $extension = pathinfo($fileName, PATHINFO_EXTENSION);
         $allowedSize = 1000000;
 
-        if(in_array($fileType , $allowedTypes) && in_array($fileName , $allowed) && $fileSize <= $allowedSize){
+        if(in_array($fileType , $allowedTypes) && in_array($extension , $allowed) && $fileSize <= $allowedSize){
             $newFileName = uniqid() . '.' . $extension;
             $uploadPath = 'uploads/' . $newFileName;
             $upload = move_uploaded_file($fileTmpName , $uploadPath);
